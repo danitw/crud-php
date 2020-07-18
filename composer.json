@@ -1,0 +1,13 @@
+{
+  "name": "danitw/crud-php",
+  "description": "CRUD feito em php para aprender conceit",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "danitw",
+      "email": "twz3xc21@gmail.com"
+    }
+  ],
+  "require": {}
+}
