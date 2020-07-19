@@ -26,7 +26,9 @@ class Banco {
 
 		$insert->execute([$name, $email, $password]);
 
-		return true;
+		$_SESSION['email'] = $email;
+		$_SESSION['name'] = $name;
+		$_SESSION['logado'] = true;
 	}
 
 	public function loginUser($em, $pass) {
@@ -42,6 +44,9 @@ class Banco {
 			throw new Exception('Suas credenciais não correspondem no banco de dados');
 		}
 
+		$_SESSION['email'] = $email;
+		$_SESSION['name'] = $user[0]->name;
+		$_SESSION['logado'] = true;
 	}
 
 	public function listUsers() {
